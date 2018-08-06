@@ -1,0 +1,40 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+#loginbox,
+#logo {
+    width: 300px;
+    margin: 25px auto 0;
+    padding: 20px;
+}
+
+#loginbox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 2px 2px 2px 2px;
+    margin: 0px auto 100px;
+    overflow: hidden;       
+}
+
+#loginbox input[type="text"], 
+#loginbox input[type="password"] {
+    background: none repeat scroll 0 0 #E4E6EB;
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: none;
+    margin: 5px auto;
+    padding: 0px 10px;
+    height: 40px;
+}
+
+#loginbox input[type="submit"] {
+    padding: 10px;
+    font-size: 20px;
+}
+
+#jAppendFormErrors ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+}

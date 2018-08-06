@@ -1,0 +1,1 @@
+<?php echo anchor($new, 'Nuevo',array('class'=>'btn btn-primary')) ?>
