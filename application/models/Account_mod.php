@@ -67,15 +67,14 @@ class account_mod extends RR_Model {
 
 
 			if($insert){
-				$inserted_id = $this->db->insert_id();
 
-				set_session("id", $inserted_id, false);
-				set_session("empresa", $customer['empresa'], false);
-				set_session("nombre", $customer['nombre'], false);
-				set_session("apellido", $customer['apellido'], false);
-				set_session("email", $customer['email'], false);
+				$subject    = "Hamburguesas Veganas : Cuenta Creada Exitosamente";
+        		$body       = $this->view('email/welcome', ['customer'=>$customer]);
+        		$email      = $this->Email->send('email_info', $customer['email'], $subject, $body);
 
-
+        		if(!$email){
+        			throw new Exception("Se ha producido un error por favor intente mas tarde.",1);
+        		}
 
 				$success = 'true';
 	            $responseType = 'function';
@@ -86,8 +85,6 @@ class account_mod extends RR_Model {
 	            	 'class_type'=>'error']);
 	            $data = array('success' => $success, 'responseType'=>$responseType, 'html'=>$messages, 'value'=>$function, 'modal_redirect'=>base_url('/carrito/detalle'));
 			}
-
-
 
 		} catch (Exception $error) {
 			$error_code_id = $error->getCode();

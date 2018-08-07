@@ -37,6 +37,7 @@ class productos_mod extends RR_Model {
 				  FROM productos p
 				  LEFT JOIN ( SELECT SUM(quantity) mas_vendido, product_id FROM order_productos GROUP BY product_id) op ON op.product_id = p.id
 				  WHERE p.id != ?
+				  AND p.status = 1
 				  ORDER BY op.mas_vendido DESC
 				  LIMIT 10';
 

@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<!DOCTYPE html><html dir="ltr" lang="en-US">
 <head>
 
 	<?php $this->view('layout/head.php')?>
@@ -20,7 +19,7 @@
 
 				<div class="col_half nobottommargin hidden-xs">
 
-					<p class="nobottommargin"><strong>Whatsapp:</strong> <a href="https://wa.me/+5491167825824" target="_blank">bla bla</a></p>
+					<p class="nobottommargin"> <a href="<?php echo $this->zap_link ?>" target="_blank"  alt="Whatsapp Rodrigo Romero : Hamburguesas Veganas" title="Whatsapp Rodrigo Romero : Hamburguesas Veganas">Mandanos un <strong>Whatsapp</strong> </a></p>
 
 				</div>
 
@@ -75,7 +74,7 @@
 				</div>
 
 			</div>
-
+			<?php echo $this->load->view('layout/partials/social_links', ['layout'=> 'one_page'], true) ?>
 		</section><!-- #content end -->
 
 		<!-- Footer
@@ -91,59 +90,25 @@
 				<div class="container clearfix">
 
 					<div class="col_half">
-						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						<!-- <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div> -->
 					</div>
 
 					<div class="col_half col_last tright">
 						<div class="fright clearfix">
-							<a href="#" class="social-icon si-small si-borderless si-facebook">
-								<i class="icon-facebook"></i>
-								<i class="icon-facebook"></i>
+							<a href="<?php echo $this->insta_link ?>" class="social-icon si-small si-borderless si-instagram" target="_blank" alt="Instagram Rodrigo Romero : Hamburguesas Veganas" title="Instagram Rodrigo Romero : Hamburguesas Veganas">
+								<i class="fab fa-instagram"></i>
+								<i class="fab fa-instagram"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-borderless si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
+							<a href="<?php echo $this->zap_link ?>" class="social-icon si-small si-borderless si-whatsapp" target="_blank" alt="Whatsapp Rodrigo Romero : Hamburguesas Veganas" title="Whatsapp Rodrigo Romero : Hamburguesas Veganas">
+								<i class="fab fa-whatsapp"></i>
+								<i class="fab fa-whatsapp"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-borderless si-gplus">
-								<i class="icon-gplus"></i>
-								<i class="icon-gplus"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-pinterest">
-								<i class="icon-pinterest"></i>
-								<i class="icon-pinterest"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-vimeo">
-								<i class="icon-vimeo"></i>
-								<i class="icon-vimeo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-github">
-								<i class="icon-github"></i>
-								<i class="icon-github"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-yahoo">
-								<i class="icon-yahoo"></i>
-								<i class="icon-yahoo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-linkedin">
-								<i class="icon-linkedin"></i>
-								<i class="icon-linkedin"></i>
-							</a>
 						</div>
 
 						<div class="clear"></div>
-							<i class="icon-envelope2"></i>
-						<?php
-						$attributes = ["title"=>'Hablemos'];
-						$string = 'Hablemos';
-						echo safe_mailto('hola@rodrigoromero.life', $string, $attributes) ?>
-						  <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span>
+
 					</div>
 
 				</div>

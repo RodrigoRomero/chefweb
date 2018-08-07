@@ -11,7 +11,7 @@ $data_price = (!empty($producto->precio_oferta) && ($hoy < $timelimit)) ? $produ
 
 $step = 1;
 $start = 0;
-$end = 24;
+$end = 10;
 if($producto->min_qty == 0  && $producto->max_qty == 0 ){
     $step = 1;
 } elseif($producto->min_qty == 24 && $producto->max_qty == 0 ) {

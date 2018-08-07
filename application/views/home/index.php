@@ -7,7 +7,7 @@
 								<div class="slider-wrap">
 									<div class="slide">
 										<a href="#">
-											<img src="images/shop/slider/1.jpg" alt="Shop Image">
+											<img src="<?php echo up_file('slider/b1.jpg') ?>" alt="Shop Image">
 										</a>
 									</div>
 									<div class="slide">
