@@ -14,16 +14,18 @@ class PHPMailer_mod extends RR_Model {
 		$this->CI->load->config('phpmailer', TRUE);
 		$this->prefs = $this->CI->config->item('phpmailer');
 
+
+		ep($this->prefs);
 		$this->email = new \PHPMailer\PHPMailer\PHPMailer();
 		$this->email->isSMTP();
 		$this->email->SMTPDebug = 2;
-		$this->email->Host = ''; //$this->prefs['smtp_host'];
-		$this->email->Port = ; //$this->prefs['smtp_port'];
+		$this->email->Host = $this->prefs['smtp_host'];
+		$this->email->Port = $this->prefs['smtp_port'];
 		//$this->email->SMTPAutoTLS = false;
 		//$this->email->SMTSecure = true;
-		$this->email->SMTPAuth = true; //$this->prefs['smtp_auth'];
-		$this->email->Username = ''; //$this->prefs['smtp_user']; //'noreply@argentinavision2020.com';
-		$this->email->Password = ''; //$this->prefs['smtp_pass']; //'\-":kSOW;(@Tq5';
+		$this->email->SMTPAuth = $this->prefs['smtp_auth'];
+		$this->email->Username = $this->prefs['smtp_user'];
+		$this->email->Password = $this->prefs['smtp_pass'];
 
 	}
 

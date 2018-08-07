@@ -27,10 +27,10 @@
 
 $config = Array(
   'protocol' => 'smtp',
-  'smtp_host' => 'box431.bluehost.com',
-  'smtp_port' => 465,
-  'smtp_user' => 'noreply@argentinavision2020.com',
-  'smtp_pass' => '#191081LPG',
+  'smtp_host' => 'smtp.mailtrap.io',
+  'smtp_port' => 25,
+  'smtp_user' => '303f9b6c2d7d25',
+  'smtp_pass' => '47ff21661ed17e',
   'smtp_auth' => true,
   'mailtype' => 'html',
   'crlf' => "\r\n",

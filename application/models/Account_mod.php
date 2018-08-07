@@ -34,7 +34,7 @@ class account_mod extends RR_Model {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('email_mod', 'Email');
+		$this->load->model('phpmailer_mod', 'Email');
 	}
 
 	public function create(){
