@@ -15,7 +15,7 @@ class PHPMailer_mod extends RR_Model {
 		$this->prefs = $this->CI->config->item('phpmailer');
 
 
-		ep($this->prefs);
+		//ep($this->prefs);
 		$this->email = new \PHPMailer\PHPMailer\PHPMailer();
 		$this->email->isSMTP();
 		$this->email->SMTPDebug = 2;

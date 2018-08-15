@@ -23,6 +23,10 @@ class Account extends RR_Controller {
 		echo $this->show_main($module);
 	}
 
+	public function testmail(){
+		$this->Account->testMail();
+	}
+
 
 
 	public function summary(){

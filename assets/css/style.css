@@ -8576,7 +8576,7 @@ body:not(.device-touch) .on-hover.i-overlay {
 	margin: 0 5px 5px 0;
 	width: 40px;
 	height: 40px;
-	font-size: 20px;
+	font-size: 30px;
 	line-height: 38px !important;
 	color: #555;
 	text-shadow: none;
@@ -8638,13 +8638,14 @@ body:not(.device-touch) .on-hover.i-overlay {
 .social-icon.si-small {
 	width: 32px;
 	height: 32px;
-	font-size: 14px;
+	font-size: 22px;
 	line-height: 30px !important;
 }
 
 .social-icon i {
 	display: block;
 	position: relative;
+	margin-top: 3px;
 }
 
 body:not(.device-touch) .social-icon i {
@@ -8655,11 +8656,11 @@ body:not(.device-touch) .social-icon i {
 
 .social-icon i:last-child { color: #FFF !important; }
 
-.social-icon:hover i:first-child { margin-top: -38px; }
+.social-icon:hover i:first-child { margin-top: -30px; }
 
 .social-icon.si-large:hover i:first-child { margin-top: -54px; }
 
-.social-icon.si-small:hover i:first-child { margin-top: -30px; }
+.social-icon.si-small:hover i:first-child { margin-top: -22px; }
 
 .social-icon:hover {
 	color: #555;
@@ -8859,6 +8860,8 @@ body:not(.device-touch) .social-icon i {
 .si-colored.si-pinterest { background-color: #C8232C !important; }
 .si-fivehundredpx:hover,
 .si-colored.si-fivehundredpx { background-color: #111 !important; }
+.si-whatsapp:hover,
+.si-colored.si-whatsapp { background-color: #075e54 !important; }
 
 
 /* Social Icons Text Color

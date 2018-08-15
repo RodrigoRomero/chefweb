@@ -37,6 +37,19 @@ class account_mod extends RR_Model {
 		$this->load->model('phpmailer_mod', 'Email');
 	}
 
+	public function testMail(){
+
+		$customer = [];
+		$customer['email'] = 'rodrigo.thepulg@gmail.com';
+
+		$subject    = "Hamburguesas Veganas : Cuenta Creada Exitosamente";
+		$body       = $this->view('email/welcome', ['customer'=>$customer]);
+		$email      = $this->Email->send('email_info', $customer['email'], $subject, $body);
+
+		ep($eamil);
+
+	}
+
 	public function create(){
 		$success = 'false';
 		$config = array();

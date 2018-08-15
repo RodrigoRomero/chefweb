@@ -92,7 +92,6 @@ class dashboard_mod extends RR_Model {
 		$sql ="SELECT COUNT(id) total, gateway
 		       FROM orders
 		       WHERE STATUS >= 0
-		       AND evento_id = ?
 		       GROUP BY gateway";
 		$total_medio_pago = $this->db->query($sql, [$this->evento_id])->result();
 		return $total_medio_pago;
@@ -126,8 +125,7 @@ class dashboard_mod extends RR_Model {
 
 	public function getTotalOrders(){
 		$sql = "SELECT COUNT(id) total
-  				FROM orders
-  				WHERE orders.`evento_id` = ?";
+  				FROM orders";
 		$total = $this->db->query($sql, [$this->evento_id])->row();
 
 		return $total;
@@ -136,12 +134,14 @@ class dashboard_mod extends RR_Model {
 	public function getOrderByStatus(){
 		$sql ="SELECT COUNT(orders.`id`) total,
 				CASE orders.`status`
-					WHEN 1 THEN 'Activas'
-					WHEN 2 THEN 'Archivadas'
+					WHEN 1 THEN 'Pendiente'
+					WHEN 2 THEN 'En Proceso'
+					WHEN 3 THEN 'En Entrega'
+					WHEN 4 THEN 'Entrada'
+					WHEN 5 THEN 'Archivada'
 					WHEN -1 THEN 'Canceladas'
 				END estado
 				FROM orders
-				WHERE orders.`evento_id` = ?
 				GROUP BY orders.`status`";
 
 		$total = $this->db->query($sql, [$this->evento_id])->result();
@@ -214,18 +214,18 @@ class dashboard_mod extends RR_Model {
 	}
 
 	public function getInscriptosChart() {
-		$evento = $this->db->get_where('eventos',array('status'=>1))->row();
 
-		if(count($evento)>0){
-			//	$sql = "SELECT COUNT(id) total_by_date, DATE_FORMAT(fa, '%d-%m-%Y') fa FROM acreditados WHERE status >= 0  AND evento_id =? GROUP BY DATE_FORMAT(fa, '%d-%m-%Y') ORDER BY acreditados.fa ASC";
-		//	$nominados = $this->db->query($sql, [$this->evento_id])->result();
-
-			$sql = "SELECT SUM(ot.nominar) total_by_date, DATE_FORMAT(o.fa, '%d-%m-%Y') fa FROM orders o LEFT JOIN order_tickets ot ON ot.order_id = o.id WHERE o.evento_id = ? AND ot.tipo = 1  GROUP BY DATE_FORMAT(o.fa, '%d-%m-%Y') ORDER BY o.fa ASC";
+			$sql = "SELECT
+					  SUM(o.total_discounted_price) total_by_date,
+					  DATE_FORMAT(o.fa, '%d-%m-%Y') fa
+					FROM
+					  orders o
+					GROUP BY DATE_FORMAT(o.fa, '%d-%m-%Y')";
 			$nominados = $this->db->query($sql, [$this->evento_id])->result();
 
 
-			$fechainicio = date('Y-m-d',strtotime($evento->fa." - 1 day"));
-			$fechafin    = date('Y-m-d',strtotime($evento->fecha_baja));
+			$fechainicio = date('Y-m-d',strtotime("2018-01-01"));
+			$fechafin    = date('Y-m-d',strtotime("2018-31-12"));
 			//$arrayFechas = $this->devuelveArrayFechasEntreOtrasDos($fechainicio,$fechafin);
 
 			$values = array();
@@ -245,11 +245,7 @@ class dashboard_mod extends RR_Model {
 		$messages     = $values;
 		$data = array('success' => $success, 'responseType'=>$responseType, 'messages'=>$messages, 'value'=>$function);
 		return $data;
-		} else {
-			$success      = false;
-			$data = array('success' => $success);
-			return $data;
-		}
+
 	}
 
 	public function nominaciones(){

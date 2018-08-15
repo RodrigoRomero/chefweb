@@ -39,7 +39,7 @@ class productos_mod extends RR_Model {
 				  WHERE p.id != ?
 				  AND p.status = 1
 				  ORDER BY op.mas_vendido DESC
-				  LIMIT 10';
+				  LIMIT 5';
 
 		$data = $this->db->query($query, [$id])->result();
 		shuffle($data);

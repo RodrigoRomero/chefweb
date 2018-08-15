@@ -53,7 +53,7 @@ ksort($options);
 					</div>
 				</div>
 			</div>
-			<div class="sale-flash">Sale!</div>
+			<!-- <div class="sale-flash">Sale!</div> -->
 		</div><!-- Product Single - Gallery End -->
 
 	</div>
@@ -98,7 +98,19 @@ ksort($options);
 		echo form_close();
 		?>
 
+		<div class="masonry-thumbs">
 
+				<a onclick="javascript:void(0)" data-lightbox="gallery-item">
+					<?php echo image_asset('100-vegano.png') ?>
+				</a>
+				<a onclick="javascript:void(0)" data-lightbox="gallery-item">
+					<?php echo image_asset('sin-gluten.png') ?>
+				</a>
+
+
+
+
+		</div>
 	</div>
 </div>
 

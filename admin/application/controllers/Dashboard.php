@@ -14,9 +14,9 @@ class Dashboard extends RR_Controller {
 	public function index(){
 
 		 $data = array (
-		 				//'total_orders'						   => $this->Dashboard->getTotalOrders(),
-						//'total_orders_status'	   			   => $this->Dashboard->getOrderByStatus(),
-						//'total_by_medio_pago'                  => $this->Dashboard->getTotalByMedioPago(),
+		 				'total_orders'						   => $this->Dashboard->getTotalOrders(),
+						'total_orders_status'	   			   => $this->Dashboard->getOrderByStatus(),
+						'total_by_medio_pago'                  => $this->Dashboard->getTotalByMedioPago(),
 						//'cupons_stats'                         => $this->Dashboard->cuponsStats(),
 						//'total_by_ticket'                      => $this->Dashboard->getTotalByTicket(),
 						//'total_registros_tickets'              => $this->Dashboard->getTotal(1),
@@ -42,9 +42,8 @@ class Dashboard extends RR_Controller {
 	}
 
 		public function getInscriptos(){
-			# $data = $this->Dashboard->getInscriptosChart();
-			# echo json_encode($data);
-			return true;
+			$data = $this->Dashboard->getInscriptosChart();
+			echo json_encode($data);
 		}
 
 		public function getInscriptosPlanesPie(){

@@ -53,6 +53,14 @@
         text-align: center;
     }
 
+    .invoice-box table tr.headingFp td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        text-align: left;
+    }
+
+
     .invoice-box table tr.details td {
         padding-bottom: 20px;
     }
@@ -79,6 +87,15 @@
      /*   border-top: 2px solid #eee; */
         font-weight: bold;
     }
+
+    .invoice-box table .warning {
+        background-color: #f0ad4e;
+        color: #ffffff;
+        padding: 5px;
+       /* display: inline-block;*/
+        font-weight: bold;
+    }
+
 
     @media only screen and (max-width: 600px) {
         .invoice-box table tr.top table td {

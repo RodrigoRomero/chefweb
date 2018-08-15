@@ -14,6 +14,8 @@ if(config.page_handle != 'ingresar' && config.page_handle != 'crear-cuenta'){
 	RR.keeper.save('comesfrom', config.page_handle);
 }
 
+console.log(RR.keeper.get('comesfrom'));
+
 
 });
 
