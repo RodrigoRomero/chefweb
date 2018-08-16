@@ -17,9 +17,9 @@
 
 			<div class="container clearfix">
 
-				<div class="col_half nobottommargin hidden-xs">
+				<div class="col_half nobottommargin">
 
-					<p class="nobottommargin"> <a href="<?php echo $this->zap_link ?>" target="_blank"  alt="Whatsapp Rodrigo Romero : Hamburguesas Veganas" title="Whatsapp Rodrigo Romero : Hamburguesas Veganas">Mandanos un <strong>Whatsapp</strong> </a></p>
+					<p class="nobottommargin center"> <a href="<?php echo $this->zap_link ?>" target="_blank"  alt="Whatsapp Rodrigo Romero : Hamburguesas Veganas" title="Whatsapp Rodrigo Romero : Hamburguesas Veganas">Mandanos un <strong>Whatsapp</strong> </a></p>
 
 				</div>
 
