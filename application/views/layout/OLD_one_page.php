@@ -88,7 +88,7 @@ src="https://www.facebook.com/tr?id=1748104025451888&ev=PageView
 								</div>
 								<!--
 									<div  class="one-page-menu">
-										<a href="#"" data-href="#section-tickets"" class="button button-3d button-white button-light button-rounded button-xlarge">Comprar Tickets</a>
+										<a href="#"" data-href="#section-tickets"" class="button button-rounded button-white button-light button-rounded button-xlarge">Comprar Tickets</a>
 
 									</div>
 									-->

@@ -27,7 +27,7 @@
 
 								<div class="col_full nobottommargin">
 
-									<button class="button button-3d" id="login-form-submit"  onclick="validateForm('login-form')">Ingresar</button>
+									<button class="button button-rounded" id="login-form-submit"  onclick="validateForm('login-form')">Ingresar</button>
 
 								</div>
 

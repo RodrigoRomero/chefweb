@@ -129,7 +129,7 @@ ksort($options);
 
 
 				<!--  <input class="jRange" name="quantity" data-max="<?php echo $max_qty?>" data-min="<?php echo $min_qty ?>" data-steps="<?php echo $steps ?>" />-->
-				<input type="submit" value="Comprar"  class="button button-3d button-xlarge btn-block nomargin" onclick="validateForm('<?php echo $form_name ?>')" />
+				<input type="submit" value="Comprar"  class="button button-rounded button-xlarge btn-block nomargin" onclick="validateForm('<?php echo $form_name ?>')" />
 
 			<?php } ?>
 

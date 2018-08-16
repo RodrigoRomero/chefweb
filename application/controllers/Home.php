@@ -9,7 +9,7 @@ class Home extends RR_Controller {
 	public function index(){
 		$module = $this->view('home/index',
 										[
-										 //'agenda'   => $this->getAgenda(),
+										 'mas_vendidos'   => $this->getMasVendidos(4)
 										 //'oradores' => $this->getOradores(),
 										 //'sponsors' => $this->getSponsors(),
 										 //'lugar'    => $this->getLugar(),
@@ -27,12 +27,12 @@ class Home extends RR_Controller {
 		echo $this->show_main($module);
 	}
 
-	public function getAgenda(){
-		$module = $this->view('evento/agenda', ['agenda' => $this->Main->getAgenda()]);
+	public function getMasVendidos($limit){
+		$module = $this->view('products/mas_vendidos', ['mas_vendidos' => $this->Productos->masVendidos($limit)]);
 		return $module;
 	}
 
-	public function getLugar(){
+	/*public function getLugar(){
 
 		$module = $this->view('evento/lugar',['lugar' => $this->Main->getLugar()]);
 		return $module;
@@ -62,5 +62,5 @@ class Home extends RR_Controller {
 	public function speaker($id){
 		$speaker = $this->Main->getOradorById($id);
 		$this->load->view('evento/speaker-detail', ['orador' => $speaker]);
-	}
+	}*/
 }

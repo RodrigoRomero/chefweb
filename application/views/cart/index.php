@@ -14,7 +14,7 @@
 						<input type="text" value="" class="sm-form-control" name="cupon" placeholder="Ingrese código promocional..." />
 					</div>
 					<div class="col-md-4 col-xs-5">
-						<a ref="javascript:void(0)" onclick="validateCupon()" class="button button-3d button-black nomargin">Usar Cupón</a>
+						<a ref="javascript:void(0)" onclick="validateCupon()" class="button button-rounded button-black nomargin">Usar Cupón</a>
 					</div>
 				</div>
 			</div>

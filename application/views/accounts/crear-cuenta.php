@@ -42,7 +42,7 @@
 		<div class="clear"></div>
 
 		<div class="col_full nobottommargin">
-			<button class="button button-3d nomargin" id="create-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Registrarme</button><br/>
+			<button class="button button-rounded nomargin" id="create-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Registrarme</button><br/>
 			<a href="<?php echo base_url('/ingresar')?>">Ya tenés cuenta, ingresá desde acá</a>
 		</div>
 

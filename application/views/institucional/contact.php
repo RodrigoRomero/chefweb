@@ -35,7 +35,7 @@
 		<div class="clear"></div>
 
 		<div class="col_full nobottommargin">
-			<button class="button button-3d nomargin" id="login-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Enviar Mensaje</button><br/>
+			<button class="button button-rounded nomargin" id="login-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Enviar Mensaje</button><br/>
 		</div>
 
 	<?php echo form_close() ?>

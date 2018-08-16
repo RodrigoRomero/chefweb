@@ -21,8 +21,8 @@ class Productos extends RR_Controller {
 
 	public function getProductById($id){
 
-		$producto = $this->productos_mod->getProductoById($id);
-		$mas_vendidos =  $this->productos_mod->getMasVendidos($id);
+		$producto = $this->Productos->getProductoById($id);
+		$mas_vendidos =  $this->Productos->getRecomendados($id);
 
 		$this->setMeta('title',$producto->nombre);
 		$this->setMeta('description', $producto->bajada);
@@ -42,7 +42,7 @@ class Productos extends RR_Controller {
 
 
 	public function getProductos(){
-		$module = $this->view('products/products', ['productos' => $this->productos_mod->getProductos()]);
+		$module = $this->view('products/products', ['productos' => $this->Productos->getProductos()]);
 		return $module;
 	}
 

@@ -67,3 +67,5 @@ $route['recuperar-password/(:any)']['GET'] = 'account/restore_passwrod/$1';
 $route['nuevo-password']['POST'] = 'account/setNewPassword';
 $route['mi-pedido/(\d+)']['GET'] = 'account/getOrderById/$1';
 $route['institucional/mensaje']['POST'] = 'institucional/sendMessage';
+$route['como-compro']['GET'] = 'institucional/comoCompro';
+$route['quienes-somos']['GET'] = 'institucional/quienesSomos';

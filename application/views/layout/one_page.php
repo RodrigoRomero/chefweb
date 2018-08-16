@@ -89,11 +89,7 @@
 
 				<div class="container clearfix">
 
-					<div class="col_half">
-						<!-- <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div> -->
-					</div>
-
-					<div class="col_half col_last tright">
+					<div class="col_full">
 						<div class="fright clearfix">
 							<a href="<?php echo $this->insta_link ?>" class="social-icon si-small si-borderless si-instagram" target="_blank" alt="Instagram Rodrigo Romero : Hamburguesas Veganas" title="Instagram Rodrigo Romero : Hamburguesas Veganas">
 								<i class="fab fa-instagram"></i>
@@ -108,8 +104,8 @@
 						</div>
 
 						<div class="clear"></div>
-
 					</div>
+
 
 				</div>
 

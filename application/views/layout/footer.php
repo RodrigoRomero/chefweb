@@ -8,14 +8,9 @@
 
 				<div class="container clearfix">
 
-					<div class="col_half">
+					<div class="col_full">
 
 						<?php echo image_asset('logo-orsonia.png', '',["class"=>"footer-logo"]) ?>
-
-					</div>
-
-					<div class="col_half col_last tright">
-
 						<div class="fright clearfix">
 							<a href="facebook.com/bisblick" class="social-icon si-small si-borderless nobottommargin si-facebook">
 								<i class="icon-facebook"></i>
@@ -34,6 +29,7 @@
 							</a>
 						</div>
 					</div>
+
 
 				</div>
 

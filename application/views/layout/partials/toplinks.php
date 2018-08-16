@@ -27,7 +27,7 @@
 
 			<div class="col_full nobottommargin">
 
-				<button class="button button-3d btn-block nomargin" id="login-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Ingresar</button>
+				<button class="button button-rounded btn-block nomargin" id="login-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Ingresar</button>
 				<a href="<?php echo base_url('/crear-cuenta')?>">Crear Cuenta</a>
 			</div>
 				<?php echo form_close() ?>

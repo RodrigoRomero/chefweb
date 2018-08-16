@@ -11,6 +11,8 @@
 								<!-- Mega Menu
 								============================================= -->
 								<li> <a href="<?php echo base_url('/productos') ?>"><div>Hamburguesas</div></a></li>
+								<li> <a href="<?php echo base_url('/como-compro') ?>"><div>Como Comprar</div></a></li>
+								<li> <a href="<?php echo base_url('/quienes-somos') ?>"><div>Quienes Somos</div></a></li>
 								<li><a href="<?php echo base_url('/contacto') ?>"><div>Contacto</div></a></li>
 							</ul>
 

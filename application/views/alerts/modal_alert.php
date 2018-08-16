@@ -10,7 +10,7 @@
 			</div>
 			<div class="modal-footer">
 				 <?php if(!empty($link)) { ?>
-					<a class="button button-3d nomargin j-checkout" href="<?php echo $link ?>">Ir al Pedido</a>
+					<a class="button button-rounded nomargin j-checkout" href="<?php echo $link ?>">Ir al Pedido</a>
 			    <?php } ?>
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 				<!--<button type="button" class="btn btn-primary">Save changes</button>-->

@@ -80,8 +80,8 @@ $newsletter = ($customer->newsletter == 1) ? 'checked' : ''
 				</div>
 
 				<div class="col_full nobottommargin">
-					<a class="button button-3d  nomargin" href="<?php echo base_url('/mi-cuenta')?>" >Cancelar</a>
-					<button class="button button-3d button-black nomargin" id="login-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Actualizar</button>
+					<a class="button button-rounded  nomargin" href="<?php echo base_url('/mi-cuenta')?>" >Cancelar</a>
+					<button class="button button-rounded button-black nomargin" id="login-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Actualizar</button>
 
 
 				</div>

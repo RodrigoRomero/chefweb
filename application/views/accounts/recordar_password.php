@@ -17,7 +17,7 @@
 
 
 			<div class="col_full nobottommargin">
-				<button class="button button-3d btn-block nomargin" id="restore-form-submit"  onclick="validateForm('login-form')" >Recuperar</button>
+				<button class="button button-rounded btn-block nomargin" id="restore-form-submit"  onclick="validateForm('login-form')" >Recuperar</button>
 			</div>
 
 		<?php echo form_close() ?>

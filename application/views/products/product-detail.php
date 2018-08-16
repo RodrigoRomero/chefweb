@@ -93,7 +93,7 @@ ksort($options);
 		$css = 'class="form-control"';
 		echo form_dropdown('quantity',$options, 0,  $css);
 		echo '</div>';
-		echo '<input type="submit" value="Comprar"  class="button button-3d button-xlarge btn-block nomargin" onclick="validateForm(\''.$form_name.'\')" />';
+		echo '<input type="submit" value="Comprar"  class="button button-rounded button-xlarge btn-block nomargin" onclick="validateForm(\''.$form_name.'\')" />';
 		}
 		echo form_close();
 		?>

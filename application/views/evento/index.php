@@ -67,7 +67,7 @@
 
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
 
-							<a href="#" class="button button-3d button-large">Check out</a>
+							<a href="#" class="button button-rounded button-large">Check out</a>
 
 						</div>
 
