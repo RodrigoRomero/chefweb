@@ -77,7 +77,7 @@ ksort($options);
 				<span itemprop="productID" class="sku_wrapper">Código Producto: <span class="sku"><?php echo $producto->sku ?></span></span>
 			</div>
 		</div>
-		<p><?php echo $producto->bajada ?></p>
+		<p><?php echo nl2br($producto->bajada) ?></p>
 		<ul class="iconlist">
 			<?php foreach($ingredientes as $ingredient) { ?>
 			<li><i class="icon-caret-right"></i><?php echo $ingredient ?></li>
