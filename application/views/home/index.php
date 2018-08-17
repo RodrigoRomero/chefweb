@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="col-md-4 nopadding">
-		<a href="#"><img src="images/shop/banners/9.jpg" alt="Image"></a>
+		<?php echo up_asset('slider/b2.jpg') ?>
 	</div>
 
 	<div class="clear"></div>
