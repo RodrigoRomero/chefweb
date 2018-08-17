@@ -367,7 +367,10 @@ function appendFormMessagesModal(data){
         clear_form_elements();
     }
 
-    grecaptcha.reset();
+    if(exists('.g-recaptcha')){
+    	grecaptcha.reset();
+    }
+
    /* if(data.items){
     	updateNumberItemsInCart(data.items);
     }*/
