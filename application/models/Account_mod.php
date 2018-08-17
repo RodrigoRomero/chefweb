@@ -35,10 +35,12 @@ class account_mod extends RR_Model {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('phpmailer_mod', 'Email');
+		$this->load->library('recaptcha');
+
 	}
 
 	public function testMail(){
-
+		/*
 		$customer = [];
 		$customer['email'] = 'rodrigo.thepulg@gmail.com';
 
@@ -47,7 +49,7 @@ class account_mod extends RR_Model {
 		$email      = $this->Email->send('email_info', $customer['email'], $subject, $body);
 
 		ep($eamil);
-
+		*/
 	}
 
 	public function create(){
@@ -58,6 +60,7 @@ class account_mod extends RR_Model {
 		$config[2] = array('field'=>'nombre', 'label'=>'Nombre', 'rules'=>'trim|required');
 		$config[3] = array('field'=>'apellido', 'label'=>'Apellido', 'rules'=>'trim|required');
 		$config[4] = array('field'=>'password', 'label'=>'Password', 'rules'=>'trim|required');
+		$config[5] = array('field'=>'g-recaptcha-response', 'label'=>'Validar Captcha', 'rules'=>'trim|required');
 
 		$this->form_validation->set_rules($config);
 
@@ -67,6 +70,12 @@ class account_mod extends RR_Model {
 				$errors = validation_errors();
 				throw new Exception($errors, 1);
 			}
+
+			$gvalidate = $this->recaptcha->validate($_POST['g-recaptcha-response']);
+
+			if(!($gvalidate) ){
+				throw new Exception("Ha ocurrido un error por favor intente más tarde. google",1);
+			};
 
 			$customer = ['nombre' => filter_input(INPUT_POST,'nombre'),
 						 'apellido' => filter_input(INPUT_POST,'apellido'),
@@ -81,9 +90,19 @@ class account_mod extends RR_Model {
 
 			if($insert){
 
+				#Mail Bienvenida
 				$subject    = "Hamburguesas Veganas : Cuenta Creada Exitosamente";
         		$body       = $this->view('email/welcome', ['customer'=>$customer]);
         		$email      = $this->Email->send('email_info', $customer['email'], $subject, $body);
+
+        		if(!$email){
+        			throw new Exception("Se ha producido un error por favor intente mas tarde.",1);
+        		}
+
+        		#Mail Admin
+        		$subject    = "Hamburguesas Veganas : Nueva Cuenta";
+        		$body       = $this->view('email/nueva_cuenta', ['customer'=>$customer]);
+        		$email      = $this->Email->send('email_info', 'me+nuevacuenta@rodrigoromero.life', $subject, $body);
 
         		if(!$email){
         			throw new Exception("Se ha producido un error por favor intente mas tarde.",1);

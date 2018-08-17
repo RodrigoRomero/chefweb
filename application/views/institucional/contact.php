@@ -30,14 +30,14 @@
 			<label for="template-contactform-message">Mensaje <small>*</small></label>
 			<textarea class="required sm-form-control" id="template-contactform-message" name="message" rows="6" cols="30"></textarea>
 		</div>
-
-
+		<div class="col_full">
+			<div class="g-recaptcha" data-sitekey="6LeOaWoUAAAAAO4hDsaTNQ8-HhiDkLAkuvk6PLII"></div>
+		</div>
 		<div class="clear"></div>
 
 		<div class="col_full nobottommargin">
 			<button class="button button-rounded nomargin" id="login-form-submit"  onclick="validateForm('<?php echo $form_name ?>')">Enviar Mensaje</button><br/>
 		</div>
-
 	<?php echo form_close() ?>
 </div>
 <div class="col_one_third col_last">

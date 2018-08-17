@@ -144,6 +144,8 @@ function validateForm(form) {
 
 
 function clear_form_elements() {
+	grecaptcha.reset();
+	alert(grecaptcha);
     $(window).find(':input').each(function() {
 
         switch(this.type) {
@@ -365,6 +367,7 @@ function appendFormMessagesModal(data){
         clear_form_elements();
     }
 
+    grecaptcha.reset();
    /* if(data.items){
     	updateNumberItemsInCart(data.items);
     }*/

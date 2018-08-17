@@ -36,7 +36,7 @@ class cart_mod extends RR_Model {
 	public function __construct() {
 		parent::__construct();
 	    $this->load->model('account_mod','Account');
-	    $this->load->model('email_mod','Email');
+	    $this->load->model('phpmailer_mod','Email');
 	    $this->load->model('cupons_mod','Cupons');
 	    $this->load->model('checkout_mod','Checkout');
 
@@ -349,7 +349,11 @@ class cart_mod extends RR_Model {
 				$customer   = $this->Account->getCustomerById();
 				$order = (object)$values;
 		    	$body  = $this->view('email/invoice', array('user_info'=>$customer, 'order'=>$order, 'id' => $order_id));
-		    	$email = $this->Email->send('email_info', $customer->email, $subject, $body, array('cc'=>$customer->email));
+		    	$email = $this->Email->send('email_info', $customer->email, $subject, $body, array('bcc'=>'me+nuevaorden@rodrigoromero.life'));
+
+
+
+
 		  		$success = true;
 				$responseType = 'redirect';
 				$data    = array('success' =>$success,'responseType'=>$responseType, 'value'=>base_url('cart/thanks'));

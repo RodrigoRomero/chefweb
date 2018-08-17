@@ -38,7 +38,9 @@
 			<label for="register-form-repassword">Repetir Contraseña:</label>
 			<input type="password" id="register-repassword" name="repassword" equalTo="#register-password" value="" class="form-control required" />
 		</div>
-
+		<div class="col_full">
+			<div class="g-recaptcha" data-sitekey="6LeOaWoUAAAAAO4hDsaTNQ8-HhiDkLAkuvk6PLII"></div>
+		</div>
 		<div class="clear"></div>
 
 		<div class="col_full nobottommargin">

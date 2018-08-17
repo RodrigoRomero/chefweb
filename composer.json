@@ -12,7 +12,8 @@
 	},
 	"require": {
 		"php": ">=5.2.4",
-		"phpmailer/phpmailer": "^6.0"
+		"phpmailer/phpmailer": "^6.0",
+		"google/recaptcha": "^1.2"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"

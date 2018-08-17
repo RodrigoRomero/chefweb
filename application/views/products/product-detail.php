@@ -44,7 +44,7 @@ ksort($options);
 		<!-- Product Single - Gallery
 		============================================= -->
 		<div class="product-image">
-			<div class="fslider" data-pagi="false" data-arrows="false" data-thumbs="true">
+			<div class="fslider" data-pagi="false" data-arrows="false" data-thumbs="false">
 				<div class="flexslider">
 					<div class="slider-wrap" data-lightbox="gallery">
 						<div class="slide" data-thumb="<?php echo up_file('products/thumbs/'.$producto->id.'_0.jpg') ?>">
@@ -56,9 +56,27 @@ ksort($options);
 			<!-- <div class="sale-flash">Sale!</div> -->
 		</div><!-- Product Single - Gallery End -->
 
+		<div class="panel panel-default product-meta topmargin">
+			<div class="panel-body">
+				<span itemprop="productID" class="sku_wrapper">Código Producto: <span class="sku"><?php echo $producto->sku ?></span></span>
+			</div>
+
+		</div>
+
+		<ul class="iconlist">
+			<?php foreach($ingredientes as $ingredient) { ?>
+			<li><i class="icon-caret-right"></i><?php echo $ingredient ?></li>
+			<?php } ?>
+		</ul>
+
+
+
+
+
+
 	</div>
-	<div class="col_half col_last product-desc">
-		<div class="product-price">
+	<div class="col_half col_last">
+				<div class="product-price">
 		<?php  if(!empty($producto->precio_oferta) &&
 		($hoy < $timelimit) &&
 		$producto->precio_regular > $producto->precio_oferta) { ?>
@@ -70,19 +88,22 @@ ksort($options);
 			<span class="price-unit">$</span><?php echo number_format($producto->precio_regular, 0, ",", ". ") ?>
 		<?php } ?>
 		</div>
-		<!-- <div class="line"></div> -->
+		<p class="topmargin"><?php echo nl2br($producto->bajada) ?></p>
 
+		<!--  -->
+<!--
 		<div class="panel panel-default product-meta">
 			<div class="panel-body">
 				<span itemprop="productID" class="sku_wrapper">Código Producto: <span class="sku"><?php echo $producto->sku ?></span></span>
 			</div>
-		</div>
-		<p><?php echo nl2br($producto->bajada) ?></p>
-		<ul class="iconlist">
+		</div> -->
+
+		<!-- <ul class="iconlist">
 			<?php foreach($ingredientes as $ingredient) { ?>
 			<li><i class="icon-caret-right"></i><?php echo $ingredient ?></li>
 			<?php } ?>
-		</ul>
+		</ul> -->
+
 		<?php
 		if($item->agotadas) {
 
@@ -90,14 +111,15 @@ ksort($options);
 		echo form_open($action,$data);
 		echo form_hidden('sku', $producto->sku);
 		echo '<div class="form-group">';
+		echo '<label for="quantity">Seleccione Cantidad:</label>';
 		$css = 'class="form-control"';
 		echo form_dropdown('quantity',$options, 0,  $css);
 		echo '</div>';
 		echo '<input type="submit" value="Comprar"  class="button button-rounded button-xlarge btn-block nomargin" onclick="validateForm(\''.$form_name.'\')" />';
-		}
 		echo form_close();
+		}
 		?>
-
+		<div class="line"></div>
 		<div class="masonry-thumbs">
 
 				<a onclick="javascript:void(0)" data-lightbox="gallery-item">
@@ -106,10 +128,6 @@ ksort($options);
 				<a onclick="javascript:void(0)" data-lightbox="gallery-item">
 					<?php echo image_asset('sin-gluten.png') ?>
 				</a>
-
-
-
-
 		</div>
 	</div>
 </div>

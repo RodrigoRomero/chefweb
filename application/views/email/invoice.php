@@ -81,7 +81,7 @@ $items = json_decode($order->full_cart)
                     <table>
                         <tr>
                             <td colspan="4">
-                                En breve te estaremos contactando para reconfirmar tu pedido, y coordinar dÃ­a / hora para la entrega de tus productos.
+                                En breve te estaremos contactando para reconfirmar tu pedido, y coordinar día / hora para la entrega de tus productos.
                             </td>
                         </tr>
                     </table>

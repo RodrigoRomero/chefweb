@@ -31,7 +31,7 @@ foreach($mas_vendidos as $product) {
 			</div>
 		</div>
 		<div class="product-desc">
-			<div class="product-title"><h3><a href="<?php echo base_url($link); ?>" ><?php echo $product->nombre ?></a></h3></div>
+			<div class="product-title"><h4 class="nomargin"><a href="<?php echo base_url($link); ?>" ><?php echo $product->nombre ?></a></h4></div>
 
 			<div class="product-price">
 
