@@ -9,7 +9,7 @@ class Recaptcha {
 
 	public function __construct(){
 		$this->CI =& get_instance();
-		$this->CI->load->config('Recaptcha');
+		$this->CI->load->config('recaptcha');
 		$this->recaptcha =  $this->CI->config->item('recaptcha');
 	}
 
