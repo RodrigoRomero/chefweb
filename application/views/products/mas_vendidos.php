@@ -1,4 +1,4 @@
-<div class="heading-block">
+<div class="heading-block topmargin">
 	<h2>+ Vendidos</h2>
 </div>
 
