@@ -36,9 +36,7 @@ ksort($options);
 
 ?>
 
-
-
-<div class="col_three_fourth product">
+<div class="col_three_fourth product" itemscope itemtype="http://schema.org/Product">
 	<div class="col_half">
 
 		<!-- Product Single - Gallery
@@ -48,7 +46,7 @@ ksort($options);
 				<div class="flexslider">
 					<div class="slider-wrap" data-lightbox="gallery">
 						<div class="slide" data-thumb="<?php echo up_file('products/thumbs/'.$producto->id.'_0.jpg') ?>">
-							<a href="<?php echo up_file('products/original/'.$producto->id.'_0.jpg') ?>" title="<?php echo $producto->nombre ?>" data-lightbox="gallery-item"><img src="<?php echo up_file('products/original/'.$producto->id.'_0.jpg') ?>" alt="<?php echo $producto->nombre ?>"></a>
+							<a href="<?php echo up_file('products/original/'.$producto->id.'_0.jpg') ?>" title="<?php echo $producto->nombre ?>" data-lightbox="gallery-item"><img itemprop="image" src="<?php echo up_file('products/original/'.$producto->id.'_0.jpg') ?>" alt="<?php echo $producto->nombre ?>"></a>
 						</div>
 					</div>
 				</div>
@@ -76,7 +74,9 @@ ksort($options);
 
 	</div>
 	<div class="col_half col_last">
-				<div class="product-price">
+		<h3 itemprop="name"><?php echo $producto->nombre ?></h3>
+		<div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+					<meta itemprop="priceCurrency" content="ARS" />
 		<?php  if(!empty($producto->precio_oferta) &&
 		($hoy < $timelimit) &&
 		$producto->precio_regular > $producto->precio_oferta) { ?>
@@ -85,10 +85,10 @@ ksort($options);
 			<span class="price-unit">$</span><?php echo number_format($producto->precio_oferta, 0, ",", ". ") ?> - <span class="price-tenure"><del>$ <?php echo number_format($producto->precio_regular, 2, ",", ". ") ?></del></span><br>
 			<small class="price-tenure">Precio Oferta Válido hasta : <?php echo $fecha_venta ?></small>
 		<?php } else { ?>
-			<span class="price-unit">$</span><?php echo number_format($producto->precio_regular, 0, ",", ". ") ?>
+			<span class="price-unit">$</span><span itemprop="price"><?php echo number_format($producto->precio_regular, 0, ",", ". ") ?></span>
 		<?php } ?>
 		</div>
-		<p class="topmargin"><?php echo nl2br($producto->bajada) ?></p>
+		<p class="topmargin" itemprop="description"><?php echo nl2br($producto->bajada) ?></p>
 
 		<!--  -->
 <!--
