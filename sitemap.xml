@@ -1,0 +1,112 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://rodrigoromero.life/</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/crear-cuenta</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/recordar-password</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/carrito/detalle</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/como-compro</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/quienes-somos</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/contacto</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesa-de-lenteja-x-6u/9</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesas-de-brocoli-x-6u/19</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesas-de-zanahoria-x-6u/20</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesa-de-quinoa-x-6u/10</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/ingresar</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesas-de-garbanzo-x-6u/13</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesas-aduki-x-6u/16</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesas-de-remolacha-x-6u/17</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://rodrigoromero.life/productos/hamburguesas-de-calabaza-x-6u/18</loc>
+  <lastmod>2018-08-21T17:47:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+
+
+</urlset>

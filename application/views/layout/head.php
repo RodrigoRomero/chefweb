@@ -11,8 +11,9 @@ echo meta($metas);
 
 ?>
 
+ <link rel="canonical" href="<?php echo $this->canonical_url; ?>" />
 
-<meta property="og:locale"			   content="es_ES" />
+<!-- <meta property="og:locale"			   content="es_ES" />
 <meta property="og:url"                content="<?php echo base_url()?>" />
 <meta property="og:type"               content="website" />
 <meta property="og:title"              content="<?php echo $this->evento->nombre ?>" />
@@ -20,7 +21,8 @@ echo meta($metas);
 <meta property="og:description"        content="<?php echo $this->evento->bajada?>" />
 <meta property="og:image"              content="<?php echo image_asset_url('av2020_og.jpg', '','') ?>" />
 <meta property="og:image:width"        content="1200" />
-<meta property="og:image:height"       content="627" />
+<meta property="og:image:height"       content="627" /> -->
+
 
 <script>
 _base_url = "<?php echo config_item('base_url')?>"
@@ -51,3 +53,12 @@ echo css_asset($css.'.css');
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124365146-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124365146-1');
+</script>
