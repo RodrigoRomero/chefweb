@@ -27,7 +27,7 @@ foreach($productos as $product) {
 			<div class="product-title"><h4 class="nomargin" itemprop="name"><a href="<?php echo base_url($link); ?>" ><?php echo $product->nombre ?></a></h4></div>
 
 			<div class="product-price" itemscope itemtype="http://schema.org/Offer">
-				<meta itemprop="priceCurrency" content="ARS" />
+			<meta itemprop="priceCurrency" content="ARS" />
 		    <?php  if(!empty($product->precio_oferta) &&
 		    	      ($hoy < $timelimit) &&
 		    	      $product->precio_regular > $product->precio_oferta) { ?>
