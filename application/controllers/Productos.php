@@ -9,6 +9,8 @@ class Productos extends RR_Controller {
 	}
 
 	public function index(){
+		$this->setMeta('title','Nuestros Productos');
+
 		$module = $this->view('products/index',
 										['productos'  => $this->getProductos()
 										]

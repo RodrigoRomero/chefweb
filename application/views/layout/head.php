@@ -13,10 +13,10 @@ echo meta($metas);
 
  <link rel="canonical" href="<?php echo $this->canonical_url; ?>" />
 
-<!-- <meta property="og:locale"			   content="es_ES" />
-<meta property="og:url"                content="<?php echo base_url()?>" />
+<meta property="og:locale"			   content="es_ES" />
+<meta property="og:url"                content="<?php echo $this->canonical_url; ?>" />
 <meta property="og:type"               content="website" />
-<meta property="og:title"              content="<?php echo $this->evento->nombre ?>" />
+<!-- <meta property="og:title"              content="<?php echo $this->evento->nombre ?>" />
 <meta property="og:site_name"          content="<?php echo $this->evento->nombre?>" />
 <meta property="og:description"        content="<?php echo $this->evento->bajada?>" />
 <meta property="og:image"              content="<?php echo image_asset_url('av2020_og.jpg', '','') ?>" />

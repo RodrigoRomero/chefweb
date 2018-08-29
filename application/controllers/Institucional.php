@@ -27,7 +27,7 @@ class Institucional extends RR_Controller {
 
 	public function comoCompro(){
 		$this->page_title = "Como Comprar?";
-		$this->setMeta('title',"Como Comprar en Come Veggie");
+		$this->setMeta('title',"Como Comprar");
 		$module = $this->view('institucional/como-comprar');
 		echo $this->show_main($module);
 
@@ -35,7 +35,7 @@ class Institucional extends RR_Controller {
 
 	public function quienesSomos(){
 		$this->page_title = "Quienes Somos";
-		$this->setMeta('title',"Quienes Somos en Come Veggie");
+		$this->setMeta('title',"Quienes Somos");
 		$module = $this->view('institucional/quienes-somos');
 		echo $this->show_main($module);
 	}
