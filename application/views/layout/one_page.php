@@ -1,4 +1,4 @@
-<!DOCTYPE html><html dir="ltr" lang="en-US">
+<!DOCTYPE html><html dir="ltr" lang="es">
 <head>
 
 	<?php $this->view('layout/head.php')?>

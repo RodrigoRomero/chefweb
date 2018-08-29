@@ -41,7 +41,7 @@ abstract class RR_Controller extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->zap_link = 'https://wa.me/5491167825824?text='.urlencode('Hola! Quisiera que me envien info sobre las hamburguesas.');
-		$this->insta_link = 'https://www.instagram.com/rodrigolromero/';
+		$this->insta_link = 'https://www.instagram.com/vida_vegana_ar/';
 		$this->canonical_url = base_url($this->uri->uri_string());
 		$this->load->model('main_mod','Main');
 		$this->today  = date('Y-m-d H:i:s');
