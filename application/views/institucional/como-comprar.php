@@ -31,7 +31,7 @@
 			<a href="#"><i class="i-alt">4.</i></a>
 		</div>
 		<h3>Confirmación Telefónica/Email</h3>
-		<p>Una vez que recibamos tu pedido, y empecemos a procesar el mismo. Te estaremos contactando para ultimar los detelles del mismo y coordinar la mejor forma posible en la entrega del producto.</p>
+		<p>Una vez que recibamos tu pedido, y empecemos a procesar el mismo. Te estaremos contactando para ultimar los detalles del mismo y coordinar la mejor forma posible en la entrega del producto.</p>
 	</div>
 </div>
 <div class="clear"></div>
