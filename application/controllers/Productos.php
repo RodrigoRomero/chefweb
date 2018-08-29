@@ -27,7 +27,7 @@ class Productos extends RR_Controller {
 		$mas_vendidos =  $this->Productos->getRecomendados($id);
 
 		$this->setMeta('title', str_replace(['x 6u'],[],$producto->nombre));
-		$this->setMeta('description', strip_tags($producto->bajada));
+		$this->setMeta('description', preg_replace("/[\\n\\r]+/", " ", $producto->bajada));
 
 		if(!$producto){
 			echo show_404();
